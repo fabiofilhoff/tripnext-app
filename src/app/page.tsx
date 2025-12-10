@@ -1,0 +1,388 @@
+"use client";
+
+import { Sparkles, Bell } from "lucide-react";
+import { useState } from "react";
+import Image from "next/image";
+
+export default function Home() {
+  const [showForm, setShowForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: ""
+  });
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (formData.name && formData.email && formData.phone) {
+      setSubscribed(true);
+      setTimeout(() => {
+        setFormData({ name: "", email: "", phone: "" });
+        setSubscribed(false);
+        setShowForm(false);
+      }, 3000);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]"></div>
+        
+        {/* Gradient Orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/30 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-600/30 rounded-full blur-[120px] animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-fuchsia-600/20 rounded-full blur-[150px] animate-pulse delay-500"></div>
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-32">
+
+        {/* Main Title */}
+        <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black mb-16 text-center">
+          <span className="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-purple-400 bg-clip-text text-transparent animate-gradient bg-[length:200%_auto]">
+            EM BREVE
+          </span>
+        </h1>
+
+        {/* Brand Logo with Futuristic Background Element */}
+        <div className="mb-6 relative">
+          {/* Futuristic Animated Ring Behind Logo */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute w-[120%] h-[120%] border-2 border-purple-500/30 rounded-full animate-spin-slow"></div>
+            <div className="absolute w-[140%] h-[140%] border border-fuchsia-500/20 rounded-full animate-spin-reverse"></div>
+            <div className="absolute w-[110%] h-[110%] border-2 border-purple-400/40 rounded-full animate-pulse-ring"></div>
+          </div>
+
+          {/* NEW: Subtle Geometric Path Element - Matching Logo Icon */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            {/* Hexagonal Path Trace */}
+            <svg className="absolute w-[130%] h-[130%] animate-path-trace" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path 
+                d="M100 20 L160 55 L160 125 L100 160 L40 125 L40 55 Z" 
+                stroke="url(#pathGradient)" 
+                strokeWidth="1.5" 
+                strokeLinecap="round"
+                strokeDasharray="400"
+                strokeDashoffset="400"
+                className="animate-draw-path"
+              />
+              <defs>
+                <linearGradient id="pathGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#a855f7" stopOpacity="0.6" />
+                  <stop offset="50%" stopColor="#d946ef" stopOpacity="0.8" />
+                  <stop offset="100%" stopColor="#a855f7" stopOpacity="0.4" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            {/* Rotating Orbit Lines */}
+            <div className="absolute w-[125%] h-[125%] animate-orbit-slow">
+              <div className="absolute top-0 left-1/2 w-0.5 h-8 bg-gradient-to-b from-purple-500/60 to-transparent -translate-x-1/2"></div>
+              <div className="absolute bottom-0 left-1/2 w-0.5 h-8 bg-gradient-to-t from-fuchsia-500/60 to-transparent -translate-x-1/2"></div>
+            </div>
+          </div>
+          
+          {/* Glow Effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-fuchsia-600 rounded-2xl blur-2xl opacity-40"></div>
+          
+          {/* Logo */}
+          <div className="relative">
+            <Image
+              src="https://k6hrqrxuu8obbfwn.public.blob.vercel-storage.com/temp/ac3aae29-4a14-49c2-82da-5acbaad4df42.webp"
+              alt="TripNext Logo"
+              width={400}
+              height={400}
+              className="w-64 sm:w-80 lg:w-96 h-auto hover:scale-102 transition-transform duration-300 relative z-10"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Description */}
+        <p className="text-lg sm:text-xl text-gray-400 max-w-2xl text-center mb-12 leading-relaxed">
+          O futuro da hospedagem começa aqui.
+        </p>
+
+        {/* Subscription Section */}
+        <div className="w-full max-w-md mb-8">
+          {!showForm ? (
+            // Initial Button - FORMATO FUTURISTA RETANGULAR COM DETALHE ANGULAR
+            <div className="relative group">
+              {/* Outer Glow */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 blur-xl opacity-60 group-hover:opacity-90 transition-opacity duration-300 animate-gradient bg-[length:200%_auto]"></div>
+              
+              {/* Button Container */}
+              <button
+                onClick={() => setShowForm(true)}
+                className="relative w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white px-8 py-4 font-bold text-base tracking-widest uppercase font-geist-mono hover:from-pink-400 hover:via-purple-400 hover:to-blue-400 transition-all duration-300 hover:scale-[1.02] shadow-2xl hover:shadow-purple-500/60 overflow-hidden clip-corner"
+              >
+                {/* Animated Shine Effect */}
+                <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+                
+                {/* Detalhe Angular no Canto Inferior Direito */}
+                <span className="absolute bottom-0 right-0 w-4 h-4 bg-black transform rotate-45 translate-x-2 translate-y-2"></span>
+                
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  INSCREVA-SE PARA A ESTREIA
+                </span>
+              </button>
+            </div>
+          ) : (
+            // Form with Fields
+            <div className="animate-fade-in">
+              <form onSubmit={handleSubmit} className="relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-fuchsia-600 rounded-2xl blur-xl opacity-30"></div>
+                <div className="relative bg-white/5 backdrop-blur-sm border border-purple-500/30 p-6 rounded-2xl space-y-4">
+                  {/* Name Field */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2 font-geist-mono uppercase tracking-wider">Nome completo</label>
+                    <input
+                      type="text"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      placeholder="Seu nome"
+                      className="w-full bg-white/5 border border-purple-500/20 px-4 py-3 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 transition-all font-geist-mono"
+                      required
+                    />
+                  </div>
+
+                  {/* Email Field */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2 font-geist-mono uppercase tracking-wider">E-mail</label>
+                    <input
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="seu@email.com"
+                      className="w-full bg-white/5 border border-purple-500/20 px-4 py-3 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 transition-all font-geist-mono"
+                      required
+                    />
+                  </div>
+
+                  {/* Phone Field */}
+                  <div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2 font-geist-mono uppercase tracking-wider">Telefone</label>
+                    <input
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      placeholder="(00) 00000-0000"
+                      className="w-full bg-white/5 border border-purple-500/20 px-4 py-3 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 transition-all font-geist-mono"
+                      required
+                    />
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex gap-3 pt-2">
+                    <button
+                      type="button"
+                      onClick={() => setShowForm(false)}
+                      className="flex-1 bg-white/5 border border-purple-500/30 text-white px-6 py-3 rounded-xl font-medium hover:bg-white/10 transition-all duration-300 font-geist-mono uppercase tracking-wider"
+                    >
+                      Voltar
+                    </button>
+                    <button
+                      type="submit"
+                      className="flex-1 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-6 py-3 rounded-xl font-bold hover:from-purple-500 hover:to-fuchsia-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 font-geist-mono uppercase tracking-wider"
+                    >
+                      Confirmar
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          )}
+
+          {/* Success Message */}
+          {subscribed && (
+            <div className="mt-4 bg-green-500/10 border border-green-500/30 rounded-xl p-4 text-center animate-fade-in">
+              <p className="text-green-400 font-medium font-geist-mono">
+                ✨ Obrigado! Você será o primeiro a saber quando lançarmos!
+              </p>
+            </div>
+          )}
+        </div>
+
+        {/* Features Preview */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl w-full mt-8">
+          <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <div className="text-3xl mb-2">🚀</div>
+            <h3 className="font-bold text-white mb-1">Rápido</h3>
+            <p className="text-sm text-gray-400">Reservas em segundos</p>
+          </div>
+          
+          <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <div className="text-3xl mb-2">💰</div>
+            <h3 className="font-bold text-white mb-1">Lucrativo</h3>
+            <p className="text-sm text-gray-400">A concorrência cobra alto. Nós cobramos justo.</p>
+          </div>
+          
+          <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
+            <div className="text-3xl mb-2">🌍</div>
+            <h3 className="font-bold text-white mb-1">Global</h3>
+            <p className="text-sm text-gray-400">Viaje sem limites</p>
+          </div>
+        </div>
+
+        {/* Social Proof */}
+        <div className="mt-16 text-center">
+          <p className="text-sm text-gray-500 mb-4">Junte-se a milhares de viajantes aguardando</p>
+          <div className="flex items-center justify-center gap-2">
+            <div className="flex -space-x-2">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <div
+                  key={i}
+                  className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-fuchsia-600 border-2 border-black flex items-center justify-center text-xs font-bold"
+                >
+                  {String.fromCharCode(64 + i)}
+                </div>
+              ))}
+            </div>
+            <span className="text-sm text-gray-400 ml-2">+2.847 inscritos</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="absolute bottom-0 left-0 right-0 z-10 py-6 text-center">
+        <p className="text-sm text-gray-600">
+          © 2024 TripNext.app - Transformando viagens em oportunidades
+        </p>
+      </div>
+
+      {/* Custom Animations */}
+      <style jsx>{`
+        @keyframes gradient {
+          0%, 100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+        }
+        
+        .animate-gradient {
+          animation: gradient 3s ease infinite;
+        }
+
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.5s ease-out;
+        }
+
+        @keyframes spin-slow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-spin-slow {
+          animation: spin-slow 20s linear infinite;
+        }
+
+        @keyframes spin-reverse {
+          from {
+            transform: rotate(360deg);
+          }
+          to {
+            transform: rotate(0deg);
+          }
+        }
+
+        .animate-spin-reverse {
+          animation: spin-reverse 15s linear infinite;
+        }
+
+        @keyframes pulse-ring {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 0.4;
+          }
+          50% {
+            transform: scale(1.05);
+            opacity: 0.6;
+          }
+        }
+
+        .animate-pulse-ring {
+          animation: pulse-ring 3s ease-in-out infinite;
+        }
+
+        @keyframes draw-path {
+          0% {
+            stroke-dashoffset: 400;
+            opacity: 0.3;
+          }
+          50% {
+            stroke-dashoffset: 0;
+            opacity: 0.8;
+          }
+          100% {
+            stroke-dashoffset: -400;
+            opacity: 0.3;
+          }
+        }
+
+        .animate-draw-path {
+          animation: draw-path 8s ease-in-out infinite;
+        }
+
+        @keyframes orbit-slow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-orbit-slow {
+          animation: orbit-slow 25s linear infinite;
+        }
+
+        @keyframes path-trace {
+          0%, 100% {
+            opacity: 0.4;
+          }
+          50% {
+            opacity: 0.8;
+          }
+        }
+
+        .animate-path-trace {
+          animation: path-trace 4s ease-in-out infinite;
+        }
+
+        .delay-500 {
+          animation-delay: 500ms;
+        }
+
+        .delay-1000 {
+          animation-delay: 1000ms;
+        }
+
+        /* Clip corner effect for futuristic button */
+        .clip-corner {
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+        }
+      `}</style>
+    </div>
+  );
+}
