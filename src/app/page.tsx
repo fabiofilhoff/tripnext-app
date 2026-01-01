@@ -1,6 +1,5 @@
 "use client";
 
-import { Sparkles, Bell } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -98,6 +97,7 @@ export default function Home() {
               height={400}
               className="w-64 sm:w-80 lg:w-96 h-auto hover:scale-102 transition-transform duration-300 relative z-10"
               priority
+              unoptimized
             />
           </div>
         </div>
