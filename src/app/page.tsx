@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Zap, TrendingUp, Globe } from "lucide-react";
+import { Zap, TrendingUp, Globe, ChevronDown } from "lucide-react";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
@@ -12,6 +12,7 @@ export default function Home() {
     phone: ""
   });
   const [subscribed, setSubscribed] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,6 +25,49 @@ export default function Home() {
       }, 3000);
     }
   };
+
+  const toggleFaq = (index: number) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      question: "O que exatamente é o TripNext?",
+      answer: "O TripNext é um sistema de aluguel inteligente que ajuda você a operar, organizar e escalar renda com aluguel, mesmo sem ser dono de imóveis."
+    },
+    {
+      question: "Preciso ter imóveis para usar o TripNext?",
+      answer: "Não. O TripNext foi criado justamente para quem não possui imóveis, mas quer controlar operações de aluguel e gerar renda de forma estratégica."
+    },
+    {
+      question: "O TripNext é um Airbnb ou plataforma de anúncios?",
+      answer: "Não. O TripNext não é um marketplace. Ele é um sistema de controle e gestão para quem quer dominar a operação do aluguel."
+    },
+    {
+      question: "Como o TripNext me ajuda a ganhar dinheiro?",
+      answer: "Ajudando você a organizar operações, controlar entradas e saídas, reduzir erros e escalar com clareza. Renda vem de controle, não de promessas."
+    },
+    {
+      question: "Posso usar o TripNext trabalhando de qualquer lugar do mundo?",
+      answer: "Sim. O sistema foi pensado para liberdade geográfica e pode ser usado de qualquer lugar com acesso à internet."
+    },
+    {
+      question: "O TripNext é indicado para iniciantes?",
+      answer: "Sim. O sistema é simples, intuitivo e pensado para quem está começando, sem depender de tentativa e erro."
+    },
+    {
+      question: "Meus dados estão seguros?",
+      answer: "Sim. O TripNext segue boas práticas de segurança e proteção de dados para garantir privacidade e uso responsável das informações."
+    },
+    {
+      question: "Quando o TripNext será lançado?",
+      answer: "O TripNext está em fase de lançamento. Quem entra na lista de espera recebe acesso antecipado e condições especiais."
+    },
+    {
+      question: "Como garantir o acesso antecipado?",
+      answer: "Basta se inscrever na lista de espera. As vagas iniciais são limitadas e o acesso será liberado por ordem de entrada."
+    }
+  ];
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -39,7 +83,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-32">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-32 font-geist-mono">
 
         {/* Main Title */}
         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black mb-16 text-center">
@@ -342,6 +386,64 @@ export default function Home() {
             </button>
           </div>
 
+        </div>
+
+        {/* SEÇÃO FAQ - DÚVIDAS COMUNS */}
+        <div className="w-full max-w-4xl px-4 mb-20">
+          {/* Header da seção */}
+          <div className="text-center mb-12">
+            <p className="text-purple-400 text-sm font-bold uppercase tracking-widest mb-3 font-geist-mono">FAQ</p>
+            <h2 className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-purple-400 font-geist-mono tracking-[0.2em] uppercase animate-gradient bg-[length:200%_auto] [text-shadow:0_0_30px_rgba(168,85,247,0.4)]">
+              Dúvidas comuns
+            </h2>
+          </div>
+
+          {/* Lista de perguntas em accordion */}
+          <div className="space-y-4">
+            {faqData.map((faq, index) => (
+              <div
+                key={index}
+                className="group relative"
+              >
+                {/* Glow sutil no hover */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600/0 via-purple-600/20 to-purple-600/0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm"></div>
+                
+                {/* Container do item */}
+                <div className="relative bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-2xl overflow-hidden hover:border-purple-400/40 transition-all duration-300">
+                  
+                  {/* Pergunta (botão clicável) */}
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="w-full flex items-center justify-between p-6 text-left transition-all duration-300"
+                  >
+                    <span className="text-lg font-semibold text-white pr-4 leading-relaxed">
+                      {faq.question}
+                    </span>
+                    <ChevronDown
+                      className={`w-6 h-6 text-purple-400 flex-shrink-0 transition-transform duration-300 ${
+                        openFaqIndex === index ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+
+                  {/* Resposta (expansível) */}
+                  <div
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                      openFaqIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="px-6 pb-6 pt-0">
+                      <div className="border-t border-purple-500/10 pt-4">
+                        <p className="text-gray-400 leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Social Proof */}
