@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Zap, TrendingUp, Globe } from "lucide-react";
 
 export default function Home() {
   const [showForm, setShowForm] = useState(false);
@@ -207,29 +208,144 @@ export default function Home() {
           )}
         </div>
 
-        {/* Features Preview */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl w-full mt-8">
-          <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
-            <div className="text-3xl mb-2">🚀</div>
-            <h3 className="font-bold text-white mb-1">Rápido</h3>
-            <p className="text-sm text-gray-400">Reservas em segundos</p>
-          </div>
+        {/* 3 CARDS PREMIUM VERTICAIS - TRIPNEXT */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl w-full mt-20 mb-16 px-4">
           
-          <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
-            <div className="text-3xl mb-2">💰</div>
-            <h3 className="font-bold text-white mb-1">Lucrativo</h3>
-            <p className="text-sm text-gray-400">A concorrência cobra alto. Nós cobramos justo.</p>
+          {/* CARD 1 - CONTROLE */}
+          <div className="group relative">
+            {/* Glow externo premium */}
+            <div className="absolute -inset-1 bg-gradient-to-b from-purple-600 via-blue-600 to-purple-800 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
+            
+            {/* Card container vertical grande */}
+            <div className="relative bg-gradient-to-b from-slate-900/95 via-slate-950/95 to-black/95 backdrop-blur-2xl border border-purple-500/20 rounded-3xl p-10 hover:border-purple-400/40 transition-all duration-700 hover:scale-[1.03] overflow-hidden min-h-[420px] flex flex-col">
+              
+              {/* Textura sutil no background */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(139,92,246,0.1),transparent)] opacity-50"></div>
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+              
+              {/* Ícone minimalista no topo com glow suave */}
+              <div className="relative mb-8 flex justify-center">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-purple-500 rounded-2xl blur-2xl opacity-40"></div>
+                  <div className="relative bg-gradient-to-br from-purple-500/10 to-purple-600/5 p-5 rounded-2xl border border-purple-500/20 backdrop-blur-sm">
+                    <Zap className="w-10 h-10 text-purple-400" strokeWidth={1.5} />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Headline clara e forte */}
+              <h3 className="relative text-3xl font-black text-white mb-4 tracking-tight leading-tight text-center">
+                Controle em tempo real
+              </h3>
+              
+              {/* Texto de apoio curto */}
+              <p className="relative text-base text-gray-400 leading-relaxed text-center font-light flex-grow">
+                Operações de aluguel em segundos, com controle total e sem burocracia.
+              </p>
+
+              {/* Sombra suave para profundidade */}
+              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/10 to-transparent pointer-events-none"></div>
+            </div>
           </div>
+
+          {/* CARD 2 - LUCRO */}
+          <div className="group relative">
+            {/* Glow externo premium */}
+            <div className="absolute -inset-1 bg-gradient-to-b from-blue-600 via-indigo-600 to-blue-800 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
+            
+            {/* Card container vertical grande */}
+            <div className="relative bg-gradient-to-b from-slate-900/95 via-slate-950/95 to-black/95 backdrop-blur-2xl border border-blue-500/20 rounded-3xl p-10 hover:border-blue-400/40 transition-all duration-700 hover:scale-[1.03] overflow-hidden min-h-[420px] flex flex-col">
+              
+              {/* Textura sutil no background */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(59,130,246,0.1),transparent)] opacity-50"></div>
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+              
+              {/* Ícone minimalista no topo com glow suave */}
+              <div className="relative mb-8 flex justify-center">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-blue-500 rounded-2xl blur-2xl opacity-40"></div>
+                  <div className="relative bg-gradient-to-br from-blue-500/10 to-blue-600/5 p-5 rounded-2xl border border-blue-500/20 backdrop-blur-sm">
+                    <TrendingUp className="w-10 h-10 text-blue-400" strokeWidth={1.5} />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Headline clara e forte */}
+              <h3 className="relative text-3xl font-black text-white mb-4 tracking-tight leading-tight text-center">
+                Lucro acima da média
+              </h3>
+              
+              {/* Texto de apoio curto */}
+              <p className="relative text-base text-gray-400 leading-relaxed text-center font-light flex-grow">
+                Menos taxas, mais margem e total controle sobre seus ganhos.
+              </p>
+
+              {/* Sombra suave para profundidade */}
+              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-900/10 to-transparent pointer-events-none"></div>
+            </div>
+          </div>
+
+          {/* CARD 3 - LIBERDADE */}
+          <div className="group relative">
+            {/* Glow externo premium */}
+            <div className="absolute -inset-1 bg-gradient-to-b from-indigo-600 via-purple-600 to-indigo-800 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
+            
+            {/* Card container vertical grande */}
+            <div className="relative bg-gradient-to-b from-slate-900/95 via-slate-950/95 to-black/95 backdrop-blur-2xl border border-indigo-500/20 rounded-3xl p-10 hover:border-indigo-400/40 transition-all duration-700 hover:scale-[1.03] overflow-hidden min-h-[420px] flex flex-col">
+              
+              {/* Textura sutil no background */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(99,102,241,0.1),transparent)] opacity-50"></div>
+              <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+              
+              {/* Ícone minimalista no topo com glow suave */}
+              <div className="relative mb-8 flex justify-center">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-indigo-500 rounded-2xl blur-2xl opacity-40"></div>
+                  <div className="relative bg-gradient-to-br from-indigo-500/10 to-indigo-600/5 p-5 rounded-2xl border border-indigo-500/20 backdrop-blur-sm">
+                    <Globe className="w-10 h-10 text-indigo-400" strokeWidth={1.5} />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Headline clara e forte */}
+              <h3 className="relative text-3xl font-black text-white mb-4 tracking-tight leading-tight text-center">
+                Renda sem fronteiras
+              </h3>
+              
+              {/* Texto de apoio curto */}
+              <p className="relative text-base text-gray-400 leading-relaxed text-center font-light flex-grow">
+                Ganhe com aluguel de qualquer lugar do mundo, sem endereço fixo.
+              </p>
+
+              {/* Sombra suave para profundidade */}
+              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-indigo-900/10 to-transparent pointer-events-none"></div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* BOTÃO CTA PRINCIPAL - CENTRALIZADO E NO TOPO (APÓS CARDS) */}
+        <div className="flex justify-center max-w-2xl w-full mb-16 px-4">
           
-          <div className="bg-white/5 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 text-center hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
-            <div className="text-3xl mb-2">🌍</div>
-            <h3 className="font-bold text-white mb-1">Global</h3>
-            <p className="text-sm text-gray-400">Viaje sem limites</p>
+          {/* BOTÃO PRINCIPAL - CTA AGRESSIVO */}
+          <div className="relative group w-full max-w-lg">
+            {/* Glow externo forte */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-purple-500 rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-gradient bg-[length:200%_auto]"></div>
+            
+            <button className="relative w-full bg-gradient-to-r from-purple-600 via-fuchsia-600 to-purple-600 text-white px-8 py-5 rounded-2xl font-black text-lg tracking-wide uppercase hover:scale-[1.02] transition-all duration-300 shadow-2xl hover:shadow-purple-500/60 overflow-hidden">
+              {/* Shine effect */}
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
+              
+              <span className="relative z-10">
+                QUERO ACESSO ANTECIPADO
+              </span>
+            </button>
           </div>
+
         </div>
 
         {/* Social Proof */}
-        <div className="mt-16 text-center">
+        <div className="mt-8 text-center">
           <p className="text-sm text-gray-500 mb-4">Junte-se a milhares de viajantes aguardando</p>
           <div className="flex items-center justify-center gap-2">
             <div className="flex -space-x-2">
