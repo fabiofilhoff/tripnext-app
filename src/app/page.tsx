@@ -468,7 +468,7 @@ export default function Home() {
       {/* Footer */}
       <div className="absolute bottom-0 left-0 right-0 z-10 py-6 text-center">
         <p className="text-sm text-gray-600">
-          © 2024 TripNext.app - Transformando viagens em oportunidades
+          © 2025 TripNext.app - Transformando viagens em oportunidades, aluguel em renda!
         </p>
       </div>
 
