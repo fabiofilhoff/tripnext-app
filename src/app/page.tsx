@@ -71,19 +71,53 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Animated Background */}
+      {/* NOVA ANIMAÇÃO DE FUNDO - NÚCLEO DE ENERGIA CIRCULAR FUTURISTA */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]"></div>
+        {/* Núcleo de energia circular brilhante - emergindo do centro inferior */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[800px] h-[800px]">
+          {/* Core central com glow intenso */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            {/* Núcleo principal - roxo/violeta brilhante */}
+            <div className="absolute w-[300px] h-[300px] bg-gradient-to-r from-purple-500 via-violet-500 to-fuchsia-500 rounded-full blur-[80px] opacity-80 animate-core-pulse"></div>
+            
+            {/* Halo externo - bloom effect */}
+            <div className="absolute w-[500px] h-[500px] bg-gradient-to-r from-purple-400/40 via-violet-400/40 to-fuchsia-400/40 rounded-full blur-[120px] animate-halo-expand"></div>
+            
+            {/* Glow volumétrico adicional */}
+            <div className="absolute w-[700px] h-[700px] bg-gradient-to-r from-purple-300/20 via-violet-300/20 to-fuchsia-300/20 rounded-full blur-[150px] animate-volumetric-glow"></div>
+          </div>
+
+          {/* Ondas de energia radiais */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute w-[400px] h-[400px] border-2 border-purple-500/30 rounded-full animate-energy-wave-1"></div>
+            <div className="absolute w-[500px] h-[500px] border-2 border-violet-500/20 rounded-full animate-energy-wave-2"></div>
+            <div className="absolute w-[600px] h-[600px] border border-fuchsia-500/15 rounded-full animate-energy-wave-3"></div>
+          </div>
+
+          {/* Partículas de energia orbitando */}
+          <div className="absolute inset-0 animate-orbit-particles">
+            <div className="absolute top-1/4 left-1/2 w-3 h-3 bg-purple-400 rounded-full blur-sm shadow-[0_0_20px_rgba(168,85,247,0.8)]"></div>
+            <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-violet-400 rounded-full blur-sm shadow-[0_0_15px_rgba(139,92,246,0.8)]"></div>
+            <div className="absolute top-1/2 left-2/3 w-2 h-2 bg-fuchsia-400 rounded-full blur-sm shadow-[0_0_15px_rgba(217,70,239,0.8)]"></div>
+          </div>
+
+          {/* Raios de luz volumétrica */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute w-[2px] h-[400px] bg-gradient-to-t from-purple-500/50 via-purple-400/30 to-transparent blur-sm animate-light-ray-1"></div>
+            <div className="absolute w-[2px] h-[400px] bg-gradient-to-t from-violet-500/50 via-violet-400/30 to-transparent blur-sm animate-light-ray-2 rotate-45"></div>
+            <div className="absolute w-[2px] h-[400px] bg-gradient-to-t from-fuchsia-500/50 via-fuchsia-400/30 to-transparent blur-sm animate-light-ray-3 -rotate-45"></div>
+          </div>
+        </div>
+
+        {/* Dispersão atmosférica de luz */}
+        <div className="absolute inset-0 bg-gradient-to-t from-purple-950/30 via-transparent to-transparent"></div>
         
-        {/* Gradient Orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/30 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-600/30 rounded-full blur-[120px] animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-fuchsia-600/20 rounded-full blur-[150px] animate-pulse delay-500"></div>
+        {/* Grid Pattern sutil */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,black,transparent)]"></div>
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-32 font-geist-mono">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-32 font-inter">
 
         {/* Main Title */}
         <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black mb-16 text-center">
@@ -147,9 +181,9 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Description */}
-        <p className="text-lg sm:text-xl text-gray-400 max-w-2xl text-center mb-12 leading-relaxed">
-          O futuro da hospedagem começa aqui.
+        {/* Description - ATUALIZADA E MAIS BAIXA */}
+        <p className="text-lg sm:text-xl text-gray-400 max-w-2xl text-center mb-12 leading-relaxed font-inter mt-8">
+          Hospede. Viaje. Sublucre. Ganhe. Tudo no mesmo lugar.
         </p>
 
         {/* Subscription Section */}
@@ -163,7 +197,7 @@ export default function Home() {
               {/* Button Container */}
               <button
                 onClick={() => setShowForm(true)}
-                className="relative w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white px-8 py-4 font-bold text-base tracking-widest uppercase font-geist-mono hover:from-pink-400 hover:via-purple-400 hover:to-blue-400 transition-all duration-300 hover:scale-[1.02] shadow-2xl hover:shadow-purple-500/60 overflow-hidden clip-corner"
+                className="relative w-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white px-8 py-4 font-bold text-base tracking-widest uppercase font-inter hover:from-pink-400 hover:via-purple-400 hover:to-blue-400 transition-all duration-300 hover:scale-[1.02] shadow-2xl hover:shadow-purple-500/60 overflow-hidden clip-corner"
               >
                 {/* Animated Shine Effect */}
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
@@ -184,39 +218,39 @@ export default function Home() {
                 <div className="relative bg-white/5 backdrop-blur-sm border border-purple-500/30 p-6 rounded-2xl space-y-4">
                   {/* Name Field */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2 font-geist-mono uppercase tracking-wider">Nome completo</label>
+                    <label className="block text-sm font-medium text-gray-300 mb-2 font-inter uppercase tracking-wider">Nome completo</label>
                     <input
                       type="text"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Seu nome"
-                      className="w-full bg-white/5 border border-purple-500/20 px-4 py-3 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 transition-all font-geist-mono"
+                      className="w-full bg-white/5 border border-purple-500/20 px-4 py-3 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 transition-all font-inter"
                       required
                     />
                   </div>
 
                   {/* Email Field */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2 font-geist-mono uppercase tracking-wider">E-mail</label>
+                    <label className="block text-sm font-medium text-gray-300 mb-2 font-inter uppercase tracking-wider">E-mail</label>
                     <input
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="seu@email.com"
-                      className="w-full bg-white/5 border border-purple-500/20 px-4 py-3 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 transition-all font-geist-mono"
+                      className="w-full bg-white/5 border border-purple-500/20 px-4 py-3 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 transition-all font-inter"
                       required
                     />
                   </div>
 
                   {/* Phone Field */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2 font-geist-mono uppercase tracking-wider">Telefone</label>
+                    <label className="block text-sm font-medium text-gray-300 mb-2 font-inter uppercase tracking-wider">Telefone</label>
                     <input
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="(00) 00000-0000"
-                      className="w-full bg-white/5 border border-purple-500/20 px-4 py-3 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 transition-all font-geist-mono"
+                      className="w-full bg-white/5 border border-purple-500/20 px-4 py-3 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-purple-500/50 transition-all font-inter"
                       required
                     />
                   </div>
@@ -226,13 +260,13 @@ export default function Home() {
                     <button
                       type="button"
                       onClick={() => setShowForm(false)}
-                      className="flex-1 bg-white/5 border border-purple-500/30 text-white px-6 py-3 rounded-xl font-medium hover:bg-white/10 transition-all duration-300 font-geist-mono uppercase tracking-wider"
+                      className="flex-1 bg-white/5 border border-purple-500/30 text-white px-6 py-3 rounded-xl font-medium hover:bg-white/10 transition-all duration-300 font-inter uppercase tracking-wider"
                     >
                       Voltar
                     </button>
                     <button
                       type="submit"
-                      className="flex-1 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-6 py-3 rounded-xl font-bold hover:from-purple-500 hover:to-fuchsia-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 font-geist-mono uppercase tracking-wider"
+                      className="flex-1 bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white px-6 py-3 rounded-xl font-bold hover:from-purple-500 hover:to-fuchsia-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/50 font-inter uppercase tracking-wider"
                     >
                       Confirmar
                     </button>
@@ -245,130 +279,228 @@ export default function Home() {
           {/* Success Message */}
           {subscribed && (
             <div className="mt-4 bg-green-500/10 border border-green-500/30 rounded-xl p-4 text-center animate-fade-in">
-              <p className="text-green-400 font-medium font-geist-mono">
+              <p className="text-green-400 font-medium font-inter">
                 ✨ Obrigado! Você será o primeiro a saber quando lançarmos!
               </p>
             </div>
           )}
         </div>
 
-        {/* 3 CARDS PREMIUM VERTICAIS - TRIPNEXT */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl w-full mt-20 mb-16 px-4">
+        {/* 3 CARDS FUTURISTAS SEPARADOS COM ÍCONES ANIMADOS E EFEITO DE FUNDO */}
+        <div className="w-full max-w-6xl px-4 mt-20 mb-16">
           
-          {/* CARD 1 - CONTROLE */}
-          <div className="group relative">
-            {/* Glow externo premium */}
-            <div className="absolute -inset-1 bg-gradient-to-b from-purple-600 via-blue-600 to-purple-800 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
+          {/* Grid de 3 Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             
-            {/* Card container vertical grande */}
-            <div className="relative bg-gradient-to-b from-slate-900/95 via-slate-950/95 to-black/95 backdrop-blur-2xl border border-purple-500/20 rounded-3xl p-10 hover:border-purple-400/40 transition-all duration-700 hover:scale-[1.03] overflow-hidden min-h-[420px] flex flex-col">
+            {/* CARD 1 - HOSPEDE */}
+            <div className="group relative">
+              {/* Glow externo */}
+              <div className="absolute -inset-1 bg-gradient-to-br from-purple-600 via-purple-500 to-purple-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
               
-              {/* Textura sutil no background */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(139,92,246,0.1),transparent)] opacity-50"></div>
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-              
-              {/* Ícone minimalista no topo com glow suave */}
-              <div className="relative mb-8 flex justify-center">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-purple-500 rounded-2xl blur-2xl opacity-40"></div>
-                  <div className="relative bg-gradient-to-br from-purple-500/10 to-purple-600/5 p-5 rounded-2xl border border-purple-500/20 backdrop-blur-sm">
-                    <Zap className="w-10 h-10 text-purple-400" strokeWidth={1.5} />
+              {/* Card */}
+              <div className="relative bg-gradient-to-br from-purple-950/80 via-purple-900/60 to-purple-950/80 backdrop-blur-xl border-2 border-purple-500/30 rounded-3xl p-8 hover:border-purple-400/50 transition-all duration-700 overflow-hidden h-full flex flex-col">
+                
+                {/* EFEITO DE FUNDO ROXO EM MOVIMENTO - MESMO DO TOPO */}
+                <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                  {/* Núcleo de energia circular */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[400px] h-[400px]">
+                    {/* Core central */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="absolute w-[150px] h-[150px] bg-gradient-to-r from-purple-500 via-violet-500 to-fuchsia-500 rounded-full blur-[40px] opacity-60 animate-core-pulse"></div>
+                      <div className="absolute w-[250px] h-[250px] bg-gradient-to-r from-purple-400/30 via-violet-400/30 to-fuchsia-400/30 rounded-full blur-[60px] animate-halo-expand"></div>
+                    </div>
+                    
+                    {/* Ondas radiais */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="absolute w-[200px] h-[200px] border border-purple-500/20 rounded-full animate-energy-wave-1"></div>
+                      <div className="absolute w-[250px] h-[250px] border border-violet-500/15 rounded-full animate-energy-wave-2"></div>
+                    </div>
+                    
+                    {/* Partículas */}
+                    <div className="absolute inset-0 animate-orbit-particles">
+                      <div className="absolute top-1/4 left-1/2 w-2 h-2 bg-purple-400 rounded-full blur-sm"></div>
+                      <div className="absolute top-1/3 left-1/3 w-1.5 h-1.5 bg-violet-400 rounded-full blur-sm"></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Headline clara e forte */}
-              <h3 className="relative text-3xl font-black text-white mb-4 tracking-tight leading-tight text-center">
-                Controle em tempo real
-              </h3>
-              
-              {/* Texto de apoio curto */}
-              <p className="relative text-base text-gray-400 leading-relaxed text-center font-light flex-grow">
-                Operações de aluguel em segundos, com controle total e sem burocracia.
-              </p>
-
-              {/* Sombra suave para profundidade */}
-              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/10 to-transparent pointer-events-none"></div>
-            </div>
-          </div>
-
-          {/* CARD 2 - LUCRO */}
-          <div className="group relative">
-            {/* Glow externo premium */}
-            <div className="absolute -inset-1 bg-gradient-to-b from-blue-600 via-indigo-600 to-blue-800 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
-            
-            {/* Card container vertical grande */}
-            <div className="relative bg-gradient-to-b from-slate-900/95 via-slate-950/95 to-black/95 backdrop-blur-2xl border border-blue-500/20 rounded-3xl p-10 hover:border-blue-400/40 transition-all duration-700 hover:scale-[1.03] overflow-hidden min-h-[420px] flex flex-col">
-              
-              {/* Textura sutil no background */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(59,130,246,0.1),transparent)] opacity-50"></div>
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-              
-              {/* Ícone minimalista no topo com glow suave */}
-              <div className="relative mb-8 flex justify-center">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-blue-500 rounded-2xl blur-2xl opacity-40"></div>
-                  <div className="relative bg-gradient-to-br from-blue-500/10 to-blue-600/5 p-5 rounded-2xl border border-blue-500/20 backdrop-blur-sm">
-                    <TrendingUp className="w-10 h-10 text-blue-400" strokeWidth={1.5} />
+                
+                {/* Textura de grade futurista */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(168,85,247,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(168,85,247,0.06)_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+                
+                {/* Conteúdo */}
+                <div className="relative z-10 flex flex-col items-center text-center flex-1">
+                  
+                  {/* Ícone Animado com Efeito de Luz */}
+                  <div className="mb-6">
+                    <div className="relative">
+                      {/* Glow pulsante sutil */}
+                      <div className="absolute inset-0 bg-purple-500 rounded-2xl blur-xl opacity-40 animate-icon-glow"></div>
+                      
+                      {/* Container do ícone */}
+                      <div className="relative bg-gradient-to-br from-purple-500/30 to-purple-600/20 p-5 rounded-2xl border border-purple-400/40 group-hover:scale-110 transition-transform duration-500">
+                        <Zap className="w-10 h-10 text-purple-300 animate-icon-pulse" strokeWidth={2.5} />
+                      </div>
+                      
+                      {/* Partículas decorativas */}
+                      <div className="absolute -top-1 -right-1 w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                      <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-purple-300 rounded-full animate-pulse delay-500"></div>
+                    </div>
                   </div>
+                  
+                  {/* Título */}
+                  <h3 className="text-3xl sm:text-4xl font-black text-white mb-4 tracking-tight font-rajdhani">
+                    Hospede
+                  </h3>
+                  
+                  {/* Descrição */}
+                  <p className="text-base text-gray-300 leading-relaxed font-inter">
+                    Controle total das suas operações de aluguel em tempo real, sem burocracia.
+                  </p>
                 </div>
               </div>
-              
-              {/* Headline clara e forte */}
-              <h3 className="relative text-3xl font-black text-white mb-4 tracking-tight leading-tight text-center">
-                Lucro acima da média
-              </h3>
-              
-              {/* Texto de apoio curto */}
-              <p className="relative text-base text-gray-400 leading-relaxed text-center font-light flex-grow">
-                Menos taxas, mais margem e total controle sobre seus ganhos.
-              </p>
-
-              {/* Sombra suave para profundidade */}
-              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-900/10 to-transparent pointer-events-none"></div>
             </div>
-          </div>
 
-          {/* CARD 3 - LIBERDADE */}
-          <div className="group relative">
-            {/* Glow externo premium */}
-            <div className="absolute -inset-1 bg-gradient-to-b from-indigo-600 via-purple-600 to-indigo-800 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
-            
-            {/* Card container vertical grande */}
-            <div className="relative bg-gradient-to-b from-slate-900/95 via-slate-950/95 to-black/95 backdrop-blur-2xl border border-indigo-500/20 rounded-3xl p-10 hover:border-indigo-400/40 transition-all duration-700 hover:scale-[1.03] overflow-hidden min-h-[420px] flex flex-col">
+            {/* CARD 2 - VIAJE/SUBLUCRE */}
+            <div className="group relative">
+              {/* Glow externo */}
+              <div className="absolute -inset-1 bg-gradient-to-br from-fuchsia-600 via-fuchsia-500 to-fuchsia-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
               
-              {/* Textura sutil no background */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(99,102,241,0.1),transparent)] opacity-50"></div>
-              <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-              
-              {/* Ícone minimalista no topo com glow suave */}
-              <div className="relative mb-8 flex justify-center">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-indigo-500 rounded-2xl blur-2xl opacity-40"></div>
-                  <div className="relative bg-gradient-to-br from-indigo-500/10 to-indigo-600/5 p-5 rounded-2xl border border-indigo-500/20 backdrop-blur-sm">
-                    <Globe className="w-10 h-10 text-indigo-400" strokeWidth={1.5} />
+              {/* Card */}
+              <div className="relative bg-gradient-to-br from-fuchsia-950/80 via-fuchsia-900/60 to-fuchsia-950/80 backdrop-blur-xl border-2 border-fuchsia-500/30 rounded-3xl p-8 hover:border-fuchsia-400/50 transition-all duration-700 overflow-hidden h-full flex flex-col">
+                
+                {/* EFEITO DE FUNDO ROXO EM MOVIMENTO - MESMO DO TOPO */}
+                <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                  {/* Núcleo de energia circular */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[400px] h-[400px]">
+                    {/* Core central */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="absolute w-[150px] h-[150px] bg-gradient-to-r from-fuchsia-500 via-pink-500 to-fuchsia-500 rounded-full blur-[40px] opacity-60 animate-core-pulse"></div>
+                      <div className="absolute w-[250px] h-[250px] bg-gradient-to-r from-fuchsia-400/30 via-pink-400/30 to-fuchsia-400/30 rounded-full blur-[60px] animate-halo-expand"></div>
+                    </div>
+                    
+                    {/* Ondas radiais */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="absolute w-[200px] h-[200px] border border-fuchsia-500/20 rounded-full animate-energy-wave-1"></div>
+                      <div className="absolute w-[250px] h-[250px] border border-pink-500/15 rounded-full animate-energy-wave-2"></div>
+                    </div>
+                    
+                    {/* Partículas */}
+                    <div className="absolute inset-0 animate-orbit-particles">
+                      <div className="absolute top-1/4 left-1/2 w-2 h-2 bg-fuchsia-400 rounded-full blur-sm"></div>
+                      <div className="absolute top-1/3 left-1/3 w-1.5 h-1.5 bg-pink-400 rounded-full blur-sm"></div>
+                    </div>
                   </div>
                 </div>
+                
+                {/* Textura de grade futurista */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(217,70,239,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(217,70,239,0.06)_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+                
+                {/* Conteúdo */}
+                <div className="relative z-10 flex flex-col items-center text-center flex-1">
+                  
+                  {/* Ícone Animado com Efeito de Luz */}
+                  <div className="mb-6">
+                    <div className="relative">
+                      {/* Glow pulsante sutil */}
+                      <div className="absolute inset-0 bg-fuchsia-500 rounded-2xl blur-xl opacity-40 animate-icon-glow"></div>
+                      
+                      {/* Container do ícone */}
+                      <div className="relative bg-gradient-to-br from-fuchsia-500/30 to-fuchsia-600/20 p-5 rounded-2xl border border-fuchsia-400/40 group-hover:scale-110 transition-transform duration-500">
+                        <TrendingUp className="w-10 h-10 text-fuchsia-300 animate-icon-pulse" strokeWidth={2.5} />
+                      </div>
+                      
+                      {/* Partículas decorativas */}
+                      <div className="absolute -top-1 -right-1 w-2 h-2 bg-fuchsia-400 rounded-full animate-pulse"></div>
+                      <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-fuchsia-300 rounded-full animate-pulse delay-500"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Título */}
+                  <h3 className="text-3xl sm:text-4xl font-black text-white mb-4 tracking-tight font-rajdhani">
+                    Sublucre
+                  </h3>
+                  
+                  {/* Descrição */}
+                  <p className="text-base text-gray-300 leading-relaxed font-inter">
+                    Maximize seus ganhos com menos taxas e total controle sobre sua margem de lucro.
+                  </p>
+                </div>
               </div>
-              
-              {/* Headline clara e forte */}
-              <h3 className="relative text-3xl font-black text-white mb-4 tracking-tight leading-tight text-center">
-                Renda sem fronteiras
-              </h3>
-              
-              {/* Texto de apoio curto */}
-              <p className="relative text-base text-gray-400 leading-relaxed text-center font-light flex-grow">
-                Ganhe com aluguel de qualquer lugar do mundo, sem endereço fixo.
-              </p>
-
-              {/* Sombra suave para profundidade */}
-              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-indigo-900/10 to-transparent pointer-events-none"></div>
             </div>
+
+            {/* CARD 3 - GANHE */}
+            <div className="group relative">
+              {/* Glow externo */}
+              <div className="absolute -inset-1 bg-gradient-to-br from-violet-600 via-violet-500 to-violet-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-700"></div>
+              
+              {/* Card */}
+              <div className="relative bg-gradient-to-br from-violet-950/80 via-violet-900/60 to-violet-950/80 backdrop-blur-xl border-2 border-violet-500/30 rounded-3xl p-8 hover:border-violet-400/50 transition-all duration-700 overflow-hidden h-full flex flex-col">
+                
+                {/* EFEITO DE FUNDO ROXO EM MOVIMENTO - MESMO DO TOPO */}
+                <div className="absolute inset-0 overflow-hidden rounded-3xl">
+                  {/* Núcleo de energia circular */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[400px] h-[400px]">
+                    {/* Core central */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="absolute w-[150px] h-[150px] bg-gradient-to-r from-violet-500 via-purple-500 to-violet-500 rounded-full blur-[40px] opacity-60 animate-core-pulse"></div>
+                      <div className="absolute w-[250px] h-[250px] bg-gradient-to-r from-violet-400/30 via-purple-400/30 to-violet-400/30 rounded-full blur-[60px] animate-halo-expand"></div>
+                    </div>
+                    
+                    {/* Ondas radiais */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="absolute w-[200px] h-[200px] border border-violet-500/20 rounded-full animate-energy-wave-1"></div>
+                      <div className="absolute w-[250px] h-[250px] border border-purple-500/15 rounded-full animate-energy-wave-2"></div>
+                    </div>
+                    
+                    {/* Partículas */}
+                    <div className="absolute inset-0 animate-orbit-particles">
+                      <div className="absolute top-1/4 left-1/2 w-2 h-2 bg-violet-400 rounded-full blur-sm"></div>
+                      <div className="absolute top-1/3 left-1/3 w-1.5 h-1.5 bg-purple-400 rounded-full blur-sm"></div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Textura de grade futurista */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.06)_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+                
+                {/* Conteúdo */}
+                <div className="relative z-10 flex flex-col items-center text-center flex-1">
+                  
+                  {/* Ícone Animado com Efeito de Luz */}
+                  <div className="mb-6">
+                    <div className="relative">
+                      {/* Glow pulsante sutil */}
+                      <div className="absolute inset-0 bg-violet-500 rounded-2xl blur-xl opacity-40 animate-icon-glow"></div>
+                      
+                      {/* Container do ícone */}
+                      <div className="relative bg-gradient-to-br from-violet-500/30 to-violet-600/20 p-5 rounded-2xl border border-violet-400/40 group-hover:scale-110 transition-transform duration-500">
+                        <Globe className="w-10 h-10 text-violet-300 animate-icon-pulse" strokeWidth={2.5} />
+                      </div>
+                      
+                      {/* Partículas decorativas */}
+                      <div className="absolute -top-1 -right-1 w-2 h-2 bg-violet-400 rounded-full animate-pulse"></div>
+                      <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-violet-300 rounded-full animate-pulse delay-500"></div>
+                    </div>
+                  </div>
+                  
+                  {/* Título */}
+                  <h3 className="text-3xl sm:text-4xl font-black text-white mb-4 tracking-tight font-rajdhani">
+                    Ganhe
+                  </h3>
+                  
+                  {/* Descrição */}
+                  <p className="text-base text-gray-300 leading-relaxed font-inter">
+                    Gere renda de qualquer lugar do mundo, com total liberdade geográfica.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
         </div>
 
-        {/* BOTÃO CTA PRINCIPAL - CENTRALIZADO E NO TOPO (APÓS CARDS) */}
+        {/* BOTÃO CTA PRINCIPAL - CENTRALIZADO E NO TOPO (APÓS CARD) */}
         <div className="flex justify-center max-w-2xl w-full mb-16 px-4">
           
           {/* BOTÃO PRINCIPAL - CTA AGRESSIVO */}
@@ -376,7 +508,10 @@ export default function Home() {
             {/* Glow externo forte */}
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-fuchsia-500 to-purple-500 rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-gradient bg-[length:200%_auto]"></div>
             
-            <button className="relative w-full bg-gradient-to-r from-purple-600 via-fuchsia-600 to-purple-600 text-white px-8 py-5 rounded-2xl font-black text-lg tracking-wide uppercase hover:scale-[1.02] transition-all duration-300 shadow-2xl hover:shadow-purple-500/60 overflow-hidden">
+            <button 
+              onClick={() => setShowForm(true)}
+              className="relative w-full bg-gradient-to-r from-purple-600 via-fuchsia-600 to-purple-600 text-white px-8 py-5 rounded-2xl font-black text-lg tracking-wide uppercase hover:scale-[1.02] transition-all duration-300 shadow-2xl hover:shadow-purple-500/60 overflow-hidden font-rajdhani"
+            >
               {/* Shine effect */}
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></span>
               
@@ -392,8 +527,8 @@ export default function Home() {
         <div className="w-full max-w-4xl px-4 mb-20">
           {/* Header da seção */}
           <div className="text-center mb-12">
-            <p className="text-purple-400 text-sm font-bold uppercase tracking-widest mb-3 font-geist-mono">FAQ</p>
-            <h2 className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-purple-400 font-geist-mono tracking-[0.2em] uppercase animate-gradient bg-[length:200%_auto] [text-shadow:0_0_30px_rgba(168,85,247,0.4)]">
+            <p className="text-purple-400 text-sm font-bold uppercase tracking-widest mb-3 font-inter">FAQ</p>
+            <h2 className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-purple-400 font-rajdhani tracking-[0.2em] uppercase animate-gradient bg-[length:200%_auto] [text-shadow:0_0_30px_rgba(168,85,247,0.4)]">
               Dúvidas comuns
             </h2>
           </div>
@@ -416,7 +551,7 @@ export default function Home() {
                     onClick={() => toggleFaq(index)}
                     className="w-full flex items-center justify-between p-6 text-left transition-all duration-300"
                   >
-                    <span className="text-lg font-semibold text-white pr-4 leading-relaxed">
+                    <span className="text-lg font-semibold text-white pr-4 leading-relaxed font-inter">
                       {faq.question}
                     </span>
                     <ChevronDown
@@ -434,7 +569,7 @@ export default function Home() {
                   >
                     <div className="px-6 pb-6 pt-0">
                       <div className="border-t border-purple-500/10 pt-4">
-                        <p className="text-gray-400 leading-relaxed">
+                        <p className="text-gray-400 leading-relaxed font-inter">
                           {faq.answer}
                         </p>
                       </div>
@@ -445,35 +580,213 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        {/* Social Proof */}
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500 mb-4">Junte-se a milhares de viajantes aguardando</p>
-          <div className="flex items-center justify-center gap-2">
-            <div className="flex -space-x-2">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div
-                  key={i}
-                  className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-fuchsia-600 border-2 border-black flex items-center justify-center text-xs font-bold"
-                >
-                  {String.fromCharCode(64 + i)}
-                </div>
-              ))}
-            </div>
-            <span className="text-sm text-gray-400 ml-2">+2.847 inscritos</span>
-          </div>
-        </div>
       </div>
 
       {/* Footer */}
       <div className="absolute bottom-0 left-0 right-0 z-10 py-6 text-center">
-        <p className="text-sm text-gray-600">
-          © 2025 TripNext.app - Transformando viagens em oportunidades, aluguel em renda!
+        <p className="text-sm text-gray-600 font-inter">
+          © 2025 TripNext.App - Transformando viagens em oportunidades, aluguel em fonte de renda!
         </p>
       </div>
 
       {/* Custom Animations */}
       <style jsx>{`
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+        .font-rajdhani {
+          font-family: 'Rajdhani', sans-serif;
+        }
+
+        /* Animação do núcleo de energia */
+        @keyframes core-pulse {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 0.8;
+          }
+          50% {
+            transform: scale(1.1);
+            opacity: 1;
+          }
+        }
+
+        .animate-core-pulse {
+          animation: core-pulse 6s ease-in-out infinite;
+        }
+
+        /* Animação do halo externo */
+        @keyframes halo-expand {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 0.4;
+          }
+          50% {
+            transform: scale(1.15);
+            opacity: 0.6;
+          }
+        }
+
+        .animate-halo-expand {
+          animation: halo-expand 8s ease-in-out infinite;
+        }
+
+        /* Animação de glow volumétrico */
+        @keyframes volumetric-glow {
+          0%, 100% {
+            transform: scale(1) rotate(0deg);
+            opacity: 0.2;
+          }
+          50% {
+            transform: scale(1.2) rotate(180deg);
+            opacity: 0.3;
+          }
+        }
+
+        .animate-volumetric-glow {
+          animation: volumetric-glow 12s ease-in-out infinite;
+        }
+
+        /* Ondas de energia radiais */
+        @keyframes energy-wave-1 {
+          0% {
+            transform: scale(0.8);
+            opacity: 0;
+          }
+          50% {
+            opacity: 0.3;
+          }
+          100% {
+            transform: scale(1.5);
+            opacity: 0;
+          }
+        }
+
+        @keyframes energy-wave-2 {
+          0% {
+            transform: scale(0.8);
+            opacity: 0;
+          }
+          50% {
+            opacity: 0.2;
+          }
+          100% {
+            transform: scale(1.6);
+            opacity: 0;
+          }
+        }
+
+        @keyframes energy-wave-3 {
+          0% {
+            transform: scale(0.8);
+            opacity: 0;
+          }
+          50% {
+            opacity: 0.15;
+          }
+          100% {
+            transform: scale(1.7);
+            opacity: 0;
+          }
+        }
+
+        .animate-energy-wave-1 {
+          animation: energy-wave-1 6s ease-out infinite;
+        }
+
+        .animate-energy-wave-2 {
+          animation: energy-wave-2 7s ease-out infinite 1s;
+        }
+
+        .animate-energy-wave-3 {
+          animation: energy-wave-3 8s ease-out infinite 2s;
+        }
+
+        /* Partículas orbitando */
+        @keyframes orbit-particles {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-orbit-particles {
+          animation: orbit-particles 20s linear infinite;
+        }
+
+        /* Raios de luz volumétrica */
+        @keyframes light-ray-1 {
+          0%, 100% {
+            opacity: 0.3;
+            transform: scaleY(1);
+          }
+          50% {
+            opacity: 0.6;
+            transform: scaleY(1.2);
+          }
+        }
+
+        @keyframes light-ray-2 {
+          0%, 100% {
+            opacity: 0.2;
+            transform: rotate(45deg) scaleY(1);
+          }
+          50% {
+            opacity: 0.5;
+            transform: rotate(45deg) scaleY(1.3);
+          }
+        }
+
+        @keyframes light-ray-3 {
+          0%, 100% {
+            opacity: 0.2;
+            transform: rotate(-45deg) scaleY(1);
+          }
+          50% {
+            opacity: 0.5;
+            transform: rotate(-45deg) scaleY(1.3);
+          }
+        }
+
+        .animate-light-ray-1 {
+          animation: light-ray-1 7s ease-in-out infinite;
+        }
+
+        .animate-light-ray-2 {
+          animation: light-ray-2 8s ease-in-out infinite 1s;
+        }
+
+        .animate-light-ray-3 {
+          animation: light-ray-3 9s ease-in-out infinite 2s;
+        }
+
+        /* ANIMAÇÕES DOS ÍCONES - EFEITO DE LUZ SUTIL */
+        @keyframes icon-glow {
+          0%, 100% {
+            opacity: 0.3;
+          }
+          50% {
+            opacity: 0.6;
+          }
+        }
+
+        .animate-icon-glow {
+          animation: icon-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes icon-pulse {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.05);
+          }
+        }
+
+        .animate-icon-pulse {
+          animation: icon-pulse 2s ease-in-out infinite;
+        }
+
         @keyframes gradient {
           0%, 100% {
             background-position: 0% 50%;
